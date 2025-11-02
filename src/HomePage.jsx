@@ -16,7 +16,7 @@ import mapsIcon from "./assets/icons/maps.svg";
 import mailIcon from "./assets/icons/mail.svg";
 
 import DJ1 from "./assets/DJ1.jpeg";
-import ThemeCarousel from "./components/themeCarousel";
+import ThemeCarousel from "./components/ThemeCarousel";
 
 export default function HomePage() {
   return (
