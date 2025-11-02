@@ -16,6 +16,7 @@ import mapsIcon from "./assets/icons/maps.svg";
 import mailIcon from "./assets/icons/mail.svg";
 
 import DJ1 from "./assets/DJ1.jpeg";
+import ThemeCarousel from "./components/themeCarousel";
 
 export default function HomePage() {
   return (
@@ -89,6 +90,14 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+      </section>
+
+      <section aria-label="themes section" className="themes-section">
+        <div className="section-header">
+          <p>Our themes</p>
+          <h1>What our different nights look like</h1>
+        </div>
+        <ThemeCarousel />
       </section>
 
       <section aria-label="reservation section" className="reservation-section">
