@@ -3,22 +3,22 @@ import logo from "../assets/oneLoveClubLogo.png";
 
 export default function NavBar() {
   const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
-      setShow(false);
-    } else {
-      setShow(true);
-    }
-    setLastScrollY(window.scrollY);
-  };
-
   useEffect(() => {
+    const controlNavbar = () => {
+      if (window.scrollY > 200) {
+        // if scrolled beyond 200px, hide
+        setShow(false);
+      } else {
+        // otherwise show
+        setShow(true);
+      }
+    };
+
     window.addEventListener("scroll", controlNavbar);
     return () => window.removeEventListener("scroll", controlNavbar);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <>
@@ -38,6 +38,7 @@ export default function NavBar() {
         {/* Regular menu for desktop */}
         <div className="nav-menu desktop">
           <a href="#">Home</a>
+          <a href="#">Menu</a>
           <a href="#">Tables</a>
           <a href="#">Events</a>
           <a href="#">Tickets</a>
@@ -47,8 +48,6 @@ export default function NavBar() {
           </a>
           <a href="#">About</a>
         </div>
-
-        {/* <button>BUY TICKETS</button> */}
       </nav>
 
       {/* Overlay (for mobile view) */}
@@ -62,6 +61,7 @@ export default function NavBar() {
           ✕
         </button>
         <a href="#">Home</a>
+        <a href="#">Menu</a>
         <a href="#">Tables</a>
         <a href="#">Events</a>
         <a href="#">Tickets</a>

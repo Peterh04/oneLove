@@ -128,7 +128,7 @@ body {
   position: relative;
 
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 
   background-color: var(--primary-color-400);
 
@@ -145,7 +145,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 3rem;
+  padding: 0 3rem 0rem 1rem;
 
   width: 100%;
   height: 15vh;
@@ -173,7 +173,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .navBar > .nav-identificaation .logo-container > img {
@@ -275,9 +275,26 @@ body {
   cursor: pointer;
 }
 
+.navBar {
+  transition: transform 0.4s ease-in-out;
+}
+
+.navBar--hidden {
+  transform: translateY(-100%);
+}
+
+.navBar--visible {
+  transform: translateY(0);
+}
+
 /* Hide desktop menu + button on small screens */
 @media (max-width: 768px) {
-  .navbar {
+  .navBar {
+    height: 10vh;
+  }
+  .navBar > .nav-identificaation .logo-container > img {
+    width: 40px;
+    height: 40px;
   }
   .nav-menu.desktop {
     display: none;
