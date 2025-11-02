@@ -1,0 +1,285 @@
+@import "./assets/styles/fonts.css";
+
+:root {
+  --primary-color-400: #000000;
+  --primary-color-200: #131315;
+
+  --secondary-color-400: #ff0f83;
+  --secondary-color-100: #bc31f7;
+
+  --font-primary: "Excon", sans-serif;
+
+  --text-primary-400: #ffffff;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  color: inherit;
+
+  transition: transform 0.25s ease;
+}
+
+button:hover {
+  cursor: pointer;
+
+  transform: translateY(-4px);
+}
+
+.fa {
+  width: 84px;
+  height: 86px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: var(--primary-color-400);
+
+  font-family: var(--font-primary);
+  font-weight: 400;
+
+  color: var(--text-primary-400);
+
+  z-index: 1000;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  height: 15vh;
+  background-color: var(--primary-color-400);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000000;
+}
+
+.navBar > .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+
+  z-index: 1000;
+}
+
+.navBar > .logo-container > img {
+  width: 60px;
+  height: 60px;
+}
+
+.navBar > .nav-menu {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-menu > a {
+  transition: color 0.3s ease;
+}
+
+.nav-menu > a:hover {
+  color: var(--secondary-color-400);
+}
+
+.navBar > button {
+  padding: 1.1rem 1.8rem;
+
+  background: linear-gradient(
+    to right,
+    var(--secondary-color-400),
+    var(--secondary-color-100)
+  );
+
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.navBar--hidden {
+  transform: translateY(-100%);
+}
+
+.navBar--visible {
+  transform: translateY(0);
+}
+
+/* ========== Mobile Drawer Styles ========== */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Hide overlay by default */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000000; /* BELOW the menu */
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 100%;
+
+  background-color: var(--primary-color-400);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  transition: right 0.3s ease;
+  z-index: 1000001; /* ABOVE overlay */
+}
+
+.mobile-menu.open {
+  right: 0; /* slide in */
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: var(--secondary-color-400);
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hide desktop menu + button on small screens */
+@media (max-width: 768px) {
+  .navbar {
+    height: 5vh;
+  }
+  .nav-menu.desktop {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navBar > button {
+    display: none;
+  }
+}
