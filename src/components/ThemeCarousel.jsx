@@ -19,52 +19,52 @@ import ForwardIcon from "../assets/icons/forward.svg?react";
 export default function ThemeCarousel() {
   const themes = {
     monday: {
-      name: "Chill & Groove",
+      name: "RnB Nights",
       description:
-        "Ease into the week with smooth beats, soulful house, and R&B.",
+        "Chill out to smooth RnB sounds and sultry slow jams. The perfect start to your week — relaxed, rhythmic, and full of style.",
       day: "Monday",
       image: chillMonday,
     },
     tuesday: {
-      name: "Latin Heat",
-      description: "Turn up the passion with reggaeton, salsa, and bachata!",
-      day: "Tuesday",
-      image: latinTuesday,
-    },
-    wednesday: {
-      name: "Hip-Hop Sessions",
+      name: "Hip-Hop & Rap",
       description:
         "From old-school classics to the latest trap bangers, Wednesday is all about rhythm and attitude.",
-      day: "Wednesday",
+      day: "Tuesday",
       image: hipWednesday,
     },
-    thursday: {
-      name: "Throwback Grooves",
+    wednesday: {
+      name: "Karaoke Night",
       description:
-        "Rewind the clock with the best hits from the 80s, 90s, and early 2000s.",
+        "Grab the mic and own the spotlight! Sing your heart out with friends for a fun, lively midweek escape.",
+      image: clubRoyaleSat,
+    },
+    thursday: {
+      name: "Multicultural Night",
+      description:
+        "Travel the world through music! From Afrobeat to Reggaeton, Bollywood to Latin — one dance floor, endless cultures.",
       day: "Thursday",
       image: throwBackThursday,
     },
     friday: {
-      name: "Electric Pulse",
+      name: "Pop Paradise",
       description:
-        "EDM, techno, and house dominate the night as lights flash and the bass drops. High energy, non-stop dancing, and pure weekend adrenaline.",
+        "All-out glamour and high-class vibes. Expect premium bottle service, elite DJs spinning mainstream hits, and a packed dance floor.",
       day: "Friday",
       image: electricFriday,
     },
     saturday: {
-      name: "Club Royale",
+      name: "General",
       description:
-        "All-out glamour and high-class vibes. Expect premium bottle service, elite DJs spinning mainstream hits, and a packed dance floor.",
+        "The ultimate party night — top DJs, all genres, and nonstop fun till sunrise. Saturday is where the weekend comes alive.",
       day: "Saturday",
       image: clubRoyaleSat,
     },
     sunday: {
-      name: "Sunset Lounge",
+      name: "Soul & Dance",
       description:
-        "Slow down, sip something smooth, and vibe to chillout, lo-fi, and deep house sounds. Cozy ambience, mellow lights, and a social crowd.",
+        "Smooth soul meets vibrant dance beats. Feel the groove, move your body, and end the week with pure rhythm and good vibes.",
       day: "Sunday",
-      image: sunsetSunday,
+      image: latinTuesday,
     },
   };
 
