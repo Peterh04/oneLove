@@ -49,7 +49,7 @@ export default function HomePage() {
               What We offer in <span>Our Club</span>
             </h1>
           </div>
-          <button>Buy tickets</button>
+          {/* <button>Buy tickets</button> */}
         </div>
 
         <div className="showcase-services">
@@ -162,7 +162,7 @@ export default function HomePage() {
                 Come and visit <span>our club</span>
               </h2>
               <div className="cta">
-                <button>Buy tickets</button>
+                {/* <button>Buy tickets</button> */}
                 <button className="diff">Contact us </button>
               </div>
             </div>
@@ -171,7 +171,10 @@ export default function HomePage() {
         <div className="contact-overlay">
           <div className="individual-contact">
             <img src={mapsIcon} alt="phone" className="fa" />
-            <p>943-951 N. Broadway Los Angeles, CA 90012, United States</p>
+            <p>
+              Near Daisha Road, Mtwapa, Opposite The Gold Fish Bar, Next to
+              Samantha's Collections, Mtwapa
+            </p>
           </div>
           <div className="individual-contact">
             <img src={mailIcon} alt="mail" className="fa" />
@@ -179,7 +182,7 @@ export default function HomePage() {
           </div>
           <div className="individual-contact">
             <img src={phoneIcon} alt="phone" className="fa" />
-            <p>+1 (414) 857 - 0107</p>
+            <p>+254 700 524 998</p>
           </div>
         </div>
       </section>

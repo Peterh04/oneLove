@@ -23,8 +23,11 @@ export default function NavBar() {
   return (
     <>
       <nav className={`navBar ${show ? "navBar--visible" : "navBar--hidden"}`}>
-        <div className="logo-container">
-          <img src={logo} alt="logo" />
+        <div className="nav-identificaation">
+          <div className="logo-container">
+            <img src={logo} alt="logo" />
+          </div>
+          <h2>One love</h2>
         </div>
 
         {/* Hamburger Icon for small screens */}
@@ -45,7 +48,7 @@ export default function NavBar() {
           <a href="#">About</a>
         </div>
 
-        <button>BUY TICKETS</button>
+        {/* <button>BUY TICKETS</button> */}
       </nav>
 
       {/* Overlay (for mobile view) */}

@@ -18,7 +18,7 @@ export default function BackgroundVideo() {
 
       <div className="video-overlay">
         <h1>Good vibes all night long, here at Club One Love</h1>
-        <button>BUY TICKETS</button>
+        {/* <button>BUY TICKETS</button> */}
       </div>
     </div>
   );
